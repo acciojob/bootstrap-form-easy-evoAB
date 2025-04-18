@@ -13,60 +13,76 @@
 		<h1>Internship Form</h1>
 	</div>
 	
-	<form class="needs-validation" novalidate>
+	<form class="row g-3 needs-validation" novalidate>
 
-	<div class="row">
-	<div class="mb-3 col-md-6 position-relative">
-		<label for="first-name-input" class="form-label">First Name</label><br>
-		<input type="text" class="form-control" id="first-name-input" name="first-name" required/>
-		<div class="invalid-feedback">
-          Please enter your first name.
-        </div>
-	</div>
-
-	<div class="mb-3 position-relative">
-		<label for="last-name-input">Last Name</label><br>
-		<input type="text" id="last-name-input" name="last-name-input" required aria-describedby="lastName"/>
-		<div id="lastName" class="form-text">Last name required</div>
-	</div>
+		<div class="col-md-4">
+			<label for="first-name-input" class="form-label">First Name</label>
+			<input type="text" class="form-control" id="first-name-input" name="first-name" required/>
+			<div class="invalid-feedback">
+	          First name required!
+	        </div>
+		</div>
 	
-	<div class="mb-3">
-		<label for="email-input">Email Address</label><br>
-		<input type="email" id="email-input" name="email-input" required/>
-	</div>
-	</div>
+		<div class="col-md-4">
+			<label for="last-name-input" class="form-label">Last Name</label>
+			<input type="text" class="form-control" id="last-name-input" name="last-name-input" required/>
+			<div class="invalid-feedback">Last name required!</div>
+		</div>
+		
+		<div class="col-md-4">
+			<label for="email-input" class="form-label">Email Address</label>
+			<input type="email" class="form-control" id="email-input" name="email-input" placeholder="xyz@abc.com" required/>
+			<div class="invalid-feedback">Email required!</div>
+		</div>
+	
+		<div class="col-md-6 mb-3">
+			<label for="college-input" class="form-label">College</label><br>
+			<input type="text" class="form-control" id="college-input" name="college" required/>
+            <div class="invalid-feedback">
+				Please provide a valid college.
+			</div>
+		</div>
+	
+		<div class="col-md-3">
+			<label for="graduation-year-input" class="form-label">Graduation Year</label>
+			<select id="graduation-year-input" class="form-select" name="graduation-year-input" required >
+				<option disabled selected value="">Choose</option>
+				<option value="2020">2020</option>
+				<option value="2021">2021</option>
+				<option value="2022">2022</option>
+				<option value="2023">2023</option>
+			</select>
+			<div class="invalid-feedback">
+				Please select a Graduation Year.
+			</div>
+		</div>
+	
+		<div class="col-md-3">
+			<label for="roll-no-input" class="form-label">Roll No.</label><br>
+			<input id="roll-no-input" class="form-control" name="roll-no-input" type="number" required/>
+            <div class="invalid-feedback">
+				Please provide a valid Roll no.
+			</div>
+		</div>
+	
+		<div class="col-12">
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" id="conditions-checkbox" required/>
+				<label class="form-check-label" for="conditions-checkbox">Agree to terms and conditions</label>
+				<div class="invalid-feedback">
+					You must agree before submitting.
+				</div>
+			</div>
+		</div>
 
-	<div class="col-md-6 mb-3">
-		<label for="college-input">College</label><br>
-		<input type="text" id="college-input" name="college" required/>
-	</div>
-
-	<div class="mb-3">
-		<label for="graduation-year-input">Graduation Year</label><br>
-		<select id="graduation-year-input" name="graduation-year-input" required >
-			<option disabled selected>Choose</option>
-			<option value="2020">2020</option>
-			<option value="2021">2021</option>
-			<option value="2022">2022</option>
-			<option value="2023">2023</option>
-		</select>
-	</div>
-
-	<div class="mb-3">
-		<label for="roll-no-input">Roll No.</label><br>
-		<input id="roll-no-input" name="roll-no-input" type="number" required/>
-	</div>
-
-	<div class="mb-3 form-check">
-		<input type="checkbox" id="conditions-checkbox" required/>
-		<label for="conditions-checkbox">Agree to terms and conditions</label>
-	</div>
-
-	<button type="submit" class="btn btn-primary">Submit form</button>
+		<div class="col-12">
+			<button type="submit" class="btn btn-primary">Submit form</button>
+		</div>
 
 	</form>
 
     <script type="text/javascript" src="./script.js">
+        
 </script>
 
 </body>
